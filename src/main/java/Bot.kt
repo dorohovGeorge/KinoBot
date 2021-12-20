@@ -73,11 +73,9 @@ class Bot() : TelegramLongPollingBot() {
                     responseText = "Добро пожаловать!"
                     val responseMessage = SendMessage(chatId.toString(), responseText)
                     responseMessage.enableMarkdown(true)
-                    // добавляем 4 кнопки
                     responseMessage.replyMarkup = getReplyMarkup(
                         listOf(
-                            listOf("Получить фильм по ID", "Поиск по фильтрам"),
-                            listOf("Просмотренные фильмы", "Случайный фильм")
+                            listOf("Поиск по фильтрам"),
                         )
                     )
                     execute(responseMessage)

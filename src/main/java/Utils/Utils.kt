@@ -3,14 +3,6 @@ package Utils
 import DAO.Filter
 
 
-fun buildGenresList(genres: HashMap<String, Int>): List<String> {
-    val listGenres = MutableList(genres.size) { i -> "" }
-    for ((key, _) in genres) {
-        listGenres.add(key)
-    }
-    return listGenres
-}
-
 fun buildGenresCallback(genres: HashMap<String, Int>, isReset: Boolean): List<String> {
     val listGenres = mutableListOf<String>()
     for ((key, value) in genres) {
@@ -94,21 +86,21 @@ fun buildSearchByFiltersRequest(filter: Filter): String {
         genres = parseGenreForRequest(filter.genresList)
     }
     var resultRequest = "/api/v2.1/films/search-by-filters?"
-    if(genres != "0") {
+    if (genres != "0") {
         resultRequest += "genre=$genres&"
     }
-    resultRequest+="order=${filter.order}&type=${filter.type}"
-    if(filter.ratingFrom!=0) {
-        resultRequest+="&ratingFrom=${filter.ratingFrom}"
+    resultRequest += "order=${filter.order}&type=${filter.type}"
+    if (filter.ratingFrom != 0) {
+        resultRequest += "&ratingFrom=${filter.ratingFrom}"
     }
-    if(filter.ratingTo != 0) {
+    if (filter.ratingTo != 0) {
         resultRequest += "&ratingTo=${filter.ratingTo}"
     }
-    if(filter.yearFrom != 0) {
+    if (filter.yearFrom != 0) {
         resultRequest += "&yearFrom=${filter.yearTo}"
     }
-    if(filter.yearTo != 0) {
-        resultRequest+="&yearTo=${filter.yearTo}"
+    if (filter.yearTo != 0) {
+        resultRequest += "&yearTo=${filter.yearTo}"
     }
     resultRequest += "&page=${filter.page}"
     return resultRequest

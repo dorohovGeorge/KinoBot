@@ -2,15 +2,9 @@ package API
 
 import DAO.Film
 import DAO.Filter
-import DAO.Genre
 import Utils.buildSearchByFiltersRequest
-import Utils.parseGenreForRequest
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonConfiguration
-import kotlinx.serialization.json.jsonArray
-import kotlinx.serialization.json.jsonObject
-import org.json.JSONArray
 import org.json.JSONObject
 import org.json.JSONTokener
 import java.io.File
@@ -18,7 +12,6 @@ import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
-import java.util.*
 import kotlin.collections.HashMap
 
 class API() {
