@@ -17,7 +17,5 @@
 ## Разработчики
 
 Приложение разрабатывается студентами группы ``3530904/90106``:
-* [Мария Позднова](https://github.com/klyuukva)
 * [Анастасия Наумчик](https://github.com/NastyaNaumchik)
-* [Даниил Шилов](https://github.com/whytrue11)
 * [Георгий Дорохов](https://github.com/dorohovGeorge)
