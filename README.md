@@ -27,6 +27,12 @@
 * [Анастасия Наумчик](https://github.com/NastyaNaumchik)
 * [Георгий Дорохов](https://github.com/dorohovGeorge)
 
+## Используемые технологии
+* Kotlin 1.6.0
+* Telegram API
+* Docker
+* Kinopoisk API
+
 ## Для запуска необходимо
 
 ### Клонировать репозиторий
