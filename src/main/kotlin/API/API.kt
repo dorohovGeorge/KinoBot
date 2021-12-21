@@ -52,7 +52,6 @@ class API() {
             .header("Content-Type", "application/json")
             .build()
         val response = client.send(request, HttpResponse.BodyHandlers.ofString())
-        println(response.body())
         val jsonObject = JSONTokener(response.body()).nextValue() as JSONObject
         val format = Json { ignoreUnknownKeys = true }
         var films = jsonObject.getJSONArray("films")
@@ -85,8 +84,6 @@ class API() {
                 "*Длительность:* ${film.filmLength} \n" +
                 "*Страна:* $parsedCountry \n" +
                 "*Фильм на кинопоиске:* ${film.webUrl} \n"
-        //"*Картинка:* ${film.picture} \n" ;
-        println(film.nameRu)
         return result
     }
 
