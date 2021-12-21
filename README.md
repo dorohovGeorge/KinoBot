@@ -19,3 +19,36 @@
 Приложение разрабатывается студентами группы ``3530904/90106``:
 * [Анастасия Наумчик](https://github.com/NastyaNaumchik)
 * [Георгий Дорохов](https://github.com/dorohovGeorge)
+
+## Для запуска необходимо
+
+### Клонировать репозиторий
+
+`` git clone https://github.com/dorohovGeorge/KinoBot.git ``
+
+### Получить токен и вставить его в файл API-KEY.txt в папку src/main/resources
+
+https://kinopoiskapiunofficial.tech
+
+### Создать своего бота и получить его бота у Telegram бота https://t.me/BotFather и вставить в файл BOT_TOKEN.txt в папку src/main/resources 
+
+### Запустить Docker контейнер
+
+`` docker build -t kinobot ./  ``
+
+`` docker run kinobot ``
+
+## Устройство проекта
+
+* Телеграмм бот обрабатывает, передает и получает информацию о фильмах
+* Стороннее API которое обрабатывает запросы для поиска информации в базе данных Kinopoisk
+
+## С4 модель
+
+### Первый уровень
+
+![img.png](img.png)
+
+### Второй уровень
+
+![img_1.png](img_1.png)
